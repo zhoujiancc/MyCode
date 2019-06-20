@@ -3,14 +3,14 @@ import os
 import csv
 
 ##读取csv文件
-rd_file = os.getcwd() + '\Config\\SOH_R_M310c_capture.csv'
+rd_file = os.getcwd() + '\CsvData\\capture.csv'
 rd_file = rd_file.replace('\\', '/')
 input_file = open(rd_file,'r', newline='')
 csv_file = csv.reader(input_file)
 print("读取文件：",rd_file)
 
 ##添加newline可以避免一行之后的空格,这样需要在python3环境下运行
-wt_file = os.getcwd() + '\CsvData\\TestID047_Log.csv'
+wt_file = os.getcwd() + '\CsvData\\TestLog.csv'
 wt_file = wt_file.replace('\\', '/')
 out = open(wt_file,'w', newline='')
 csv_write = csv.writer(out,dialect='excel')
